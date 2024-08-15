@@ -379,6 +379,7 @@ body {
   height: 100px;
   padding-top: 15px;
   border-radius: 20px;
+  display: flex;
 }
 
 .contact-input:focus {
@@ -558,21 +559,30 @@ footer .credit a {
     padding: 10px;
   }
   .contact .contact-container .contact-left{
-    height: 50%;
+    height: 60%;
     align-items: center;
     position: relative;
   }
-  .contact .contact-container .contact-left .contact-input{
-    height: 40rem;
+  .contact .contact-container .contact-left .contact-input {
+    height: 100%;
     width: 100%;
-    padding: 8px;
+    align-items: center;
+    position: relative;
+  }
+  .contact .contact-container .contact-left input {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
     align-items: center;
     position: relative;
   }
 
-  .contact .contact-container .contact-left .contact-input textarea {
-    padding: 8px;
-    height: 100%;
+  .contact .contact-container .contact-left textarea {
+    padding: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 150%;
+    display:flex;
   }
 
   .contact .contact-container .contact-left-title{
