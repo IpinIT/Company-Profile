@@ -5,49 +5,90 @@ document.querySelector('#hamburger-menu').onclick = () => {
   navbarNav.classList.toggle('active');
 };
 
-const slides = document.querySelector('.slides');
-const slide = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-let index = 0;
-const totalSlides = slide.length;
 
-function showSlide() {
-    slides.style.transform = `translateX(${-index * 100}%)`;
-    dots.forEach((dot, i) => {
+// Product Slide-Show
+const productSlides = document.querySelector('.product-slides');
+const productSlide = document.querySelectorAll('.product-slide');
+const productDots = document.querySelectorAll('.product-dot');
+let index = 0;
+const totalProductSlides = productSlide.length;
+
+function showProductSlide() {
+    productSlides.style.transform = `translateX(${-index * 100}%)`;
+    productDots.forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
 }
 
-function nextSlide() {
-    index = (index + 1) % totalSlides;
-    showSlide();
+function nextProductSlide() {
+    index = (index + 1) % totalProductSlides;
+    showProductSlide();
 }
 
-function prevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    showSlide();
+function prevProductSlide() {
+    index = (index - 1 + totalProductSlides) % totalProductSlides;
+    showProductSlide();
 }
 
-document.querySelector('.next').addEventListener('click', nextSlide);
-document.querySelector('.prev').addEventListener('click', prevSlide);
+// ONCLICK
+document.querySelector('.product-next').addEventListener('click', nextProductSlide);
+document.querySelector('.product-prev').addEventListener('click', prevProductSlide);
 
-dots.forEach((dot, i) => {
+productDots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
         index = i;
-        showSlide();
+        showProductSlide();
     });
 });
 
 // Auto slide
-setInterval(nextSlide, 3000); // Ganti angka ini untuk mengatur interval waktu pergeseran slide
+setInterval(nextProductSlide, 3000); // Ganti angka ini untuk mengatur interval waktu pergeseran slide
 
 // Initialize
-showSlide();
+showProductSlide();
 
 
+// Porto Slide-Show
+const portoSlides = document.querySelector('.porto-slides');
+const portoSlide = document.querySelectorAll('.porto-slide');
+const portoDots = document.querySelectorAll('.porto-dot');
+const totalPortoSlides = portoSlide.length;
+
+function showPortoSlide() {
+    portoSlides.style.transform = `translateX(${-index * 100}%)`;
+    portoDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+function nextPortoSlide() {
+    index = (index + 1) % totalPortoSlides;
+    showPortoSlide();
+}
+
+function prevPortoSlide() {
+    index = (index - 1 + totalPortoSlides) % totalPortoSlides;
+    showPortoSlide();
+}
+
+document.querySelector('.porto-next').addEventListener('click', nextPortoSlide);
+document.querySelector('.porto-prev').addEventListener('click', prevPortoSlide);
+
+portoDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        index = i;
+        showPortoSlide();
+    });
+});
+
+// Auto slide
+setInterval(nextPortoSlide, 3000); // Ganti angka ini untuk mengatur interval waktu pergeseran slide
+
+// Initialize
+showPortoSlide();
+
+// Hamburger Menu
 const hm = document.querySelector('#hamburger-menu');
-const sb = document.querySelector('#search-button');
-const sc = document.querySelector('#shopping-cart-button');
 
 document.addEventListener('click', function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
