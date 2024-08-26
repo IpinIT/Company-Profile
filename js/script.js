@@ -98,6 +98,7 @@ const portoSlides = document.querySelector('.porto-slides');
 const portoSlide = document.querySelectorAll('.porto-slide');
 const portoDots = document.querySelectorAll('.porto-dot');
 const totalPortoSlides = portoSlide.length;
+let index = 0;
 
 function showPortoSlide() {
     portoSlides.style.transform = `translateX(${-index * 100}%)`;
@@ -127,7 +128,7 @@ portoDots.forEach((dot, i) => {
 });
 
 // Auto slide
-setInterval(nextPortoSlide, 3000); // Ganti angka ini untuk mengatur interval waktu pergeseran slide
+setInterval(nextPortoSlide, 3000);
 
 // Initialize
 showPortoSlide();
