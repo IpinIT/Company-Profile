@@ -1,5 +1,5 @@
 :root {
-  --primary: #a95e13;
+  --primary: #994D1C;
   --bg: #010101;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .navbar .navbar-logo span {
-  color: #a95e13;
+  color: var(--primary);
 }
 
 .navbar .navbar-nav a {
@@ -122,7 +122,7 @@ body {
 
 .hero .content h1 {
   font-size: 2.5em;
-  background: linear-gradient(145deg, #C0C0C0, #E0E0E0, #A9A9A9, #F5F5F5, #C0C0C0);
+  background-color: rgba(212, 202, 202, 0.716);
   border: 5px solid;
   border-radius: 25px;
   border-color: #FF5733;
@@ -232,6 +232,7 @@ body {
 .contact h2 {
   margin-bottom: 1rem;
 }
+
 .product p,
 .porto p,
 .contact p {
@@ -250,14 +251,39 @@ body {
   justify-content: center;
 }
 
-.product .product-slider {
-  position: relative;
-  width: 100%;
-  max-width: 500px; /* Atur ukuran slider sesuai kebutuhan */
-  margin: auto;
-  overflow: hidden;
-  margin-bottom: 2rem;
+.product .row .product-card {
+  text-align: center;
+  padding-bottom: 4rem;
+  margin: 0 10px;
 }
+
+.product .row .product-card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.product .row .product-card .product-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.product-slider-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.product-slider {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
 
 .product .product-slides {
   display: flex;
@@ -265,12 +291,12 @@ body {
 }
 
 .product .product-slide {
-  min-width: 100%; /* Lebar slide sesuai dengan lebar slider */
+  min-width: 100%;
   box-sizing: border-box;
 }
 
 .product .product-slide img {
-  width: 500px; /* Atur lebar sesuai keinginan */
+  width: 500px; 
   height: 500px;
   display: block;
 }
@@ -288,11 +314,17 @@ body {
   font-size: 24px;
 }
 
-.product-nav.product-prev {
+.product-nav.product-prev1 {
+  left: 10px;
+}
+.product-nav.product-prev2 {
   left: 10px;
 }
 
-.product-nav.product-next {
+.product-nav.product-next1 {
+  right: 10px;
+}
+.product-nav.product-next2 {
   right: 10px;
 }
 
@@ -329,7 +361,7 @@ body {
 .porto .porto-slider {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Atur ukuran slider sesuai kebutuhan */
+  max-width: 500px;
   margin: auto;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -341,7 +373,7 @@ body {
 }
 
 .porto .porto-slide {
-  min-width: 100%; /* Lebar slide sesuai dengan lebar slider */
+  min-width: 100%;
   box-sizing: border-box;
 }
 
@@ -404,14 +436,14 @@ body {
 
 .contact-right {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   flex-direction: column;
   align-items: justify;
   gap: 20px;
   background: var(--primary);
   padding: 4rem 3rem;
   width: 100%;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 .contact-right .space{
   margin: 1rem;
@@ -419,6 +451,7 @@ body {
 
 .contact-right table{
   border-style: var(--primary);
+  font-size: 1.1rem;
 }
 
 .contact-left {
@@ -437,8 +470,8 @@ body {
 }
 .contact-right-title hr {
   border: none;
-  width: 90px;
-  height: 5px;
+  width: 7rem;
+  height: 3px;
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -459,7 +492,7 @@ form {
 }
 .contact-input {
   height: 50px;
-  display: block;
+  display: flex;
   border: none;
   outline: none;
   padding-left: 25px;
@@ -651,19 +684,24 @@ footer .credit a {
   .contact .contact-container {
     flex-wrap: wrap;
     width: 100%;
-    padding: 10px;
+    padding: 1 3rem;
   }
-  .contact .contact-container .contact-left{
-    height: 60%;
-    align-items: center;
-    position: relative;
-  }
-  .contact .contact-container .contact-right{
+  .contact .contact-container .contact-left .contact-right{
     height: 60%;
     align-items: center;
     position: relative;
     margin-top: 2rem;
   }
+
+  .contact-container .contact-left-title {
+    font-size: 55%;
+  }
+
+.contact-container form button{
+  width: 100%;
+  font-size: 1.8rem;
+}
+
   .contact .contact-container .contact-left .contact-input {
     height: 100%;
     width: 100%;
@@ -686,17 +724,16 @@ footer .credit a {
     display:flex;
   }
 
-  .contact .contact-container .contact-left-title{
+  .contact .contact-container .contact-left-title .contact-right-title{
     padding: 0rem;
     align-items: center;
     position: relative;
   }
   .contact .contact-container hr{
     margin-bottom: 0;
+    width: 7rem;
   }
-  .contact .contact-container form {
-    padding-top: 0;
-  }
+  
   footer .links {
     font-size: 1.3rem;
   }
