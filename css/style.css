@@ -122,7 +122,7 @@ body {
 
 .hero .content h1 {
   font-size: 2.5em;
-  background-color: rgba(212, 202, 202, 0.716);
+  background-color: rgba(212, 202, 202, 1.2);
   border: 5px solid;
   border-radius: 25px;
   border-color: #FF5733;
@@ -253,19 +253,33 @@ body {
 
 .product .row .product-card {
   text-align: center;
-  padding-bottom: 4rem;
   margin: 0 10px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
 }
 
 .product .row .product-card img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   margin: auto;
 }
 
 .product .row .product-card .product-card-title {
-  margin: 1rem auto 0.5rem;
+  margin: 0em auto 0.5rem;
+  position: relative;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .product-slider-container {
@@ -278,13 +292,25 @@ body {
 
 .product-slider {
   position: relative;
-  width: 35rem;
-  height: 35rem;
   overflow: hidden;
-  border: 2px solid #ccc;
+  border: 3px solid #ccc;
   border-radius: 10px;
+  width: 400px;
+  height: 400px;
+
 }
 
+.product-slide-title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .product .product-slides {
   display: flex;
@@ -294,12 +320,15 @@ body {
 .product .product-slide {
   min-width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .product .product-slide img {
-  width: 100%;
-  height: 35rem;
   display: block;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: auto;
 }
 
 .product-nav {
@@ -361,12 +390,12 @@ body {
 
 .porto .porto-slider {
   position: relative;
-  width: 40rem;
-  height: 35rem;
+  width: 400px;
+  height: 400px;
   margin: auto;
   overflow: hidden;
   margin-bottom: 2rem;
-  border: 2px solid #ccc;
+  border: 3px solid #ccc;
   border-radius: 10px;
 }
 
@@ -381,8 +410,8 @@ body {
 }
 
 .porto .porto-slide img {
-  width: 100%;
-  height: 35rem;
+  width: 400px;
+  height: 400px;
   display: block;
 }
 
@@ -652,14 +681,34 @@ footer .credit a {
   }
 
 
+  .hero .content {
+    width: 100%;
+    padding: 1.4rem 5%;
+    text-align: center;
+    top: 400px;
+  }
+
   .hero .content h1 {
-    font-size: 130%;
+    font-size: 100%;
+    background-color: rgba(212, 202, 202, 0.716);
+    border: 5px solid;
+    border-radius: 25px;
+    border-color: #FF5733;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.3;
   }
 
   .about .row {
     flex-wrap: wrap;
     width: 100%;
     padding: 10px;
+  }
+
+  .about .row .about-img {
+    display: flex;
+  justify-content: center; /* Mengatur posisi di tengah secara horizontal */
+  align-items: center; /* Mengatur posisi di tengah secara vertikal */
+  margin-bottom: 3rem
   }
 
   .about .row .about-img img {
@@ -682,8 +731,21 @@ footer .credit a {
   }
 
   .product p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
+
+  .product .row .product-card {
+    margin-top: 2rem;
+  }
+
+  .porto p {
+    font-size: 1.6rem;
+  }
+
+  .contact p {
+    font-size: 1.6rem;
+  }
+
   .contact .contact-container {
     flex-wrap: wrap;
     width: 100%;

@@ -97,6 +97,7 @@ setInterval(nextProductSlide2, 4000); // Ganti slide setiap 4 detik
 const portoSlides = document.querySelector('.porto-slides');
 const portoSlide = document.querySelectorAll('.porto-slide');
 const portoDots = document.querySelectorAll('.porto-dot');
+const portoSlideTitle = document.querySelectorAll('.porto-slide-title');
 const totalPortoSlides = portoSlide.length;
 let index = 0;
 
