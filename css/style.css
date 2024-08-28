@@ -94,7 +94,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../asset/header.jpg_1723563977527.jpg');
+  background-image: url('../asset/header/header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -106,7 +106,7 @@ body {
 .hero .mask-container {
   position: absolute;
   inset: 0;
-  -webkit-mask-image: url('../asset/header.jpg_1723563977527.jpg');
+  -webkit-mask-image: url('../asset/header/header.jpg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
@@ -706,8 +706,8 @@ footer .credit a {
 
   .about .row .about-img {
     display: flex;
-  justify-content: center; /* Mengatur posisi di tengah secara horizontal */
-  align-items: center; /* Mengatur posisi di tengah secara vertikal */
+  justify-content: center;
+  align-items: center;
   margin-bottom: 3rem
   }
 
